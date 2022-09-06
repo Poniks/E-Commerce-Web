@@ -3,7 +3,7 @@ import Nav from "../../Nav";
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className='dashboard'>
             <Nav />
             <p>DASHBOARD</p>
         </div> 

@@ -1,0 +1,80 @@
+@import "./variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $c-white;
+}
+
+#root {
+  max-width: 769px;
+  margin: auto;
+  position: relative;
+  background-color: $c-alabaster;
+  overflow: hidden;
+  color: $c-black;
+  font: normal normal normal 1rem $f-baseFontFamily;
+
+  & > div {
+    min-height: calc(100vh + 2px);
+    padding-bottom: 40px;
+  }
+}
+
+.app {
+  * {
+    transition: background-color 0.4s ease-in-out;
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+
+  .centered {
+    margin: auto;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+  }
+
+  .dialog-title > * {
+    padding-right: $space-medium;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .MuiCircularProgress-root.centered {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .MuiFormHelperText-root {
+    color: $c-accentSecondary;
+    font-size: 12px;
+    margin-left: 7px;
+
+    &:before {
+      content: "* ";
+      font-size: 12px;
+    }
+  }
+
+  span.error {
+    color: $c-accentSecondary;
+    font-size: 12px;
+  }
+}
