@@ -1,9 +1,11 @@
 import React from 'react';
+import Nav from "../../Nav";
 
 const Dashboard = () => {
     return (
         <div>
-            <p>Hello World!</p>
+            <Nav />
+            <p>DASHBOARD</p>
         </div> 
     )
 }
