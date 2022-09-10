@@ -10,10 +10,11 @@ html {
 
 body {
   background-color: $c-white;
+  margin: 0;
 }
 
 #root {
-  max-width: 769px;
+  max-width: 1200px;
   margin: auto;
   position: relative;
   background-color: $c-alabaster;

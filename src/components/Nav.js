@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
 
 const Nav = () => {
     return (
@@ -36,6 +38,13 @@ const Nav = () => {
                     </NavLink>
                 </li>
             </ul>
+            <div className='searchBar'>
+                <SearchIcon />
+                <InputBase
+                    placeholder="Search…"
+                    inputProps={{ 'aria-label': 'search' }}
+                />
+            </div>
         </nav>
     )
 }

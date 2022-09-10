@@ -1,0 +1,41 @@
+nav {
+    width: 100%;
+    background-color: gray; // wartość do zmiany
+    display: flex;
+    justify-content: space-between;
+  
+    ul {
+
+        display: flex;
+        list-style-type: none;
+        color: $c-white;
+        font-weight: 700;
+        width: 100%; // wartość do zmiany
+        margin: 0;
+        padding: 0;
+  
+      li {
+        display: flex;
+        cursor: pointer;
+        flex-basis: 33.33%;
+        justify-content: center;
+  
+        a {
+            height: 50px;
+            color: $c-white;
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+      }
+    }
+
+    .searchBar {
+        display: flex;
+        align-items: center;
+    }
+  }
+  
