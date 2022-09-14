@@ -3,9 +3,9 @@ import Header from "../../Header";
 
 const Dashboard = () => {
     return (
-        <div className='dashboard'>
+        <div>
             <Header />
-            <div className='main-content'>
+            <div className='dashboard'>
                 
             </div>
         </div> 
