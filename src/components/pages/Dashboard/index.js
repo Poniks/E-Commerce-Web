@@ -1,11 +1,13 @@
 import React from 'react';
-import Nav from "../../Nav";
+import Header from "../../Header";
 
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <Nav />
-            <p>DASHBOARD</p>
+            <Header />
+            <div className='main-content'>
+                
+            </div>
         </div> 
     )
 }
