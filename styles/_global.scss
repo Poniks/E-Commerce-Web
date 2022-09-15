@@ -20,11 +20,6 @@ body {
   overflow: hidden;
   color: $c-black;
   font: normal normal normal 1rem $f-baseFontFamily;
-
-  & > div {
-    min-height: calc(100vh + 2px);
-    padding-bottom: 40px;
-  }
 }
 
 .app {
