@@ -1,6 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
 @import "../variables";
 @import "../global";
 
+@import "../themes/components/dashboard";
 @import "../themes/components/nav";
 @import "../themes/components/header";
-@import "../themes/components/dashboard";
+

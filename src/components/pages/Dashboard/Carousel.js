@@ -7,7 +7,7 @@ import image3 from "../../../images/scynkk.jpg";
 
 const CarouselImage = () => {
     return (
-        <Carousel className='test'>
+        <Carousel className='slider'>
             <Carousel.Item>
                 <img
                     className="d-block w-100"
