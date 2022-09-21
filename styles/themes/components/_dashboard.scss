@@ -1,39 +1,84 @@
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/scrollbar';
+
 .dashboard {
     max-width: 1200px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 40px 0;
+    margin-bottom: 500px;
 
-    .slider {
+    .bg {
+        position: absolute;
+        left: 0px;
+        background-image: url('../../../src/images/bg.jpg');
+
+        height: 400px;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .imageSlider {
         height: auto;
 
         img {
+            width: 100%;
             height: 700px;
         }
     }
 
-    .new-products {
-        
-        .products {
-            display: flex;
-            justify-content: space-between;
+    .new-products, .popular-products, .discounted-products {
+        position: relative;
+        margin-top: 50px;
+
+        h2 {
+            position: absolute;
+            top: 0px;
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .productSlider {
+            padding: 3px;
+
+            .swiper-button-prev, .swiper-button-next {
+                position: absolute;
+                left: auto;
+                top: 20px;
+
+                &::after {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+            }
+
+            .swiper-button-prev {
+                right: 40px;
+            }
+
+            .swiper-button-next {
+                right: 10px;
+            }
 
             .product {
-                flex-basis: 20%;
-                
-                height: 100%;
+                margin-top: 60px;
                 border-radius: 8px;
                 padding: 20px;
                 box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 1);
-
+    
                 img {
                     width: 200px;
                     height: 200px;
                 }
-
+    
                 .description {
-
+    
                     h3 {
                         font-size: 1.25rem;
                         margin: 10px 0;
@@ -41,5 +86,13 @@
                 }
             }
         }
+    }
+
+    .discounted-products {
+        margin-top: 520px;
+    }
+
+    .popular-products {
+        margin-bottom: 80px;
     }
 }
