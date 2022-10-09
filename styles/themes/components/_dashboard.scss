@@ -11,10 +11,9 @@
     padding: 40px 0;
     margin-bottom: 500px;
 
-    .bg {
+    .bg, .bg2 {
         position: absolute;
         left: 0px;
-        background-image: url('../../../src/images/bg.jpg');
 
         height: 400px;
         width: 100%;
@@ -22,6 +21,14 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .bg {
+        background-image: url('../../../src/images/bg.jpg');
+    }
+
+    .bg2 {
+        background-image: url('../../../src/images/bg2.jpg');
     }
 
     .imageSlider {
@@ -35,7 +42,7 @@
 
     .new-products, .popular-products, .discounted-products {
         position: relative;
-        margin-top: 50px;
+        margin: 50px 0 80px;
 
         h2 {
             position: absolute;
@@ -88,11 +95,7 @@
         }
     }
 
-    .discounted-products {
-        margin-top: 520px;
-    }
-
     .popular-products {
-        margin-bottom: 80px;
+        margin-top: 520px;
     }
 }

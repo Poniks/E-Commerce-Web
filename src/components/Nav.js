@@ -12,7 +12,7 @@ const Nav = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/new&featured" exact>
+                    <NavLink to="/newandfeatured" exact>
                         New & Featured
                     </NavLink>
                 </li>
