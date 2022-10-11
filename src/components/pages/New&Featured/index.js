@@ -1,33 +1,19 @@
 import React, { useState } from 'react';
 import Header from "../../Header";
 import Footer from "../../Footer";
+import Categories from './Categories';
 
-import shoes from "../../../images/buty1.jpg";
-import shoes2 from "../../../images/buty2.jpg";
+import productsData from './productsData.json';
+import categoriesData from './categoriesData.json';
 
-const products = [
-    {name: "Białe Najkacze", image: shoes, price: "120zł", type: "obuwie"},
-    {name: "Czarny T-shirt", image: shoes2, price: "250zł", type: "bluzki"},
-    {name: "Biały Pasek", image: shoes, price: "99zł", type: "akcesoria"},
-    {name: "Czarne Spodnie", image: shoes2, price: "333zł", type: "spodnie"},
-    {name: "Czarna Kurtka", image: shoes2, price: "333zł", type: "kurtki"},
-    {name: "Białe Majty", image: shoes, price: "120zł", type: "bielizna"},
-]
 
 const NewAndFeatured = () => {
-    const [sortedProducts, setSortedProducts] = useState([
-        {name: "Białe Najkacze", image: shoes, price: "120zł", type: "obuwie"},
-        {name: "Czarny T-shirt", image: shoes2, price: "250zł", type: "bluzki"},
-        {name: "Biały Pasek", image: shoes, price: "99zł", type: "akcesoria"},
-        {name: "Czarne Spodnie", image: shoes2, price: "333zł", type: "spodnie"},
-        {name: "Czarna Kurtka", image: shoes2, price: "333zł", type: "kurtki"},
-        {name: "Białe Majty", image: shoes, price: "120zł", type: "bielizna"},
-    ]);
+    const [sortedProducts, setSortedProducts] = useState(productsData);
+    const [categories, setCategories] = useState(categoriesData);
 
-
-    const test = (e) => {
-        const newArray = products.filter(item => {
-            if(item.type === e.target.attributes[0].textContent) {
+    const filterHandler = (e, id) => {
+        const newArray = productsData.filter(item => {
+            if(item.type === e) {
                 return (
                     item
                 )
@@ -36,11 +22,22 @@ const NewAndFeatured = () => {
             }
         })
 
+        // const newCategories = categories.forEach(item => {
+        //     if(item.id === id) {
+        //         item.active = true       
+        //     } else item.active = false;
+        // })
+
+        const newCategories = categories; 
+
+        console.log(newCategories);
+        // setCategories(newCategories);
+
         setSortedProducts([
             ...newArray,
-        ])
+        ]);      
     }
-
+    
     return (
         <div>
             <Header />
@@ -49,12 +46,9 @@ const NewAndFeatured = () => {
                 <div className='box'>
                     <div className='box__item'>
                         <ul>
-                            <li onClick={test} value="obuwie">Obuwie</li>
-                            <li onClick={test} value="spodnie">Spodnie</li>
-                            <li onClick={test} value="bluzki">Bluzki</li>
-                            <li onClick={test} value="kurtki">Kurtki</li>
-                            <li onClick={test} value="bielizna">Bielizna</li>
-                            <li onClick={test} value="akcesoria">Akcesoria</li>
+                            {categories.map(item => (
+                                <Categories item={item.name} filterHandler={filterHandler} key={item.id} id={item.id} active={item.active}/>
+                            ))}
                         </ul>
                     </div>
                     <div className='box__item'>
@@ -62,7 +56,7 @@ const NewAndFeatured = () => {
                         <div className='products'>
                             {sortedProducts.map(item => {
                                 return (
-                                    <a href="/">
+                                    <a href="/" key={item.name}>
                                         <img src={item.image} alt="shoes" />
                                         <div className="description">
                                             <h3>{item.name}</h3>

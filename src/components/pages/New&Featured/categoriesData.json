@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0, 
+        "name": "Obuwie", 
+        "active": false
+    },
+    {
+        "id": 1, 
+        "name": "Spodnie", 
+        "active": false
+    },
+    {
+        "id": 2, 
+        "name": "Bluzki", 
+        "active": false
+    },
+    {
+        "id": 3, 
+        "name": "Kurtki", 
+        "active": false
+    },
+    {
+        "id": 4, 
+        "name": "Bielizna", 
+        "active": false
+    },
+    {
+        "id": 5, 
+        "name": "Akcesoria", 
+        "active": false
+    }
+]
