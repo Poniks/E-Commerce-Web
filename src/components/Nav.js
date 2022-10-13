@@ -7,32 +7,32 @@ const Nav = () => {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/" exact>
+                    <NavLink to="/" >
                         <HomeIcon />
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/newandfeatured" exact>
+                    <NavLink to="/newandfeatured" >
                         New & Featured
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/men" exact>
+                    <NavLink to="/men" >
                         Men
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/women" exact>
+                    <NavLink to="/women" >
                         Women
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/kids" exact>
+                    <NavLink to="/kids" >
                         Kids
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" exact>
+                    <NavLink to="/contact" >
                         Contact
                     </NavLink>
                 </li>

@@ -9,8 +9,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={ <Dashboard /> } />
-        <Route exact path="/newandfeatured" element={ <NewAndFeatured /> } />
+        <Route path="/" element={ <Dashboard /> } />
+        <Route path="/newandfeatured" element={ <NewAndFeatured /> } />
       </Routes>
     </Router>
   );

@@ -6,12 +6,12 @@ import shoes from "../../../images/buty1.jpg";
 import shoes2 from "../../../images/buty2.jpg";
 
 const products = [
-    {name: "Białe Najkacze", image: shoes, price: "120zł"},
-    {name: "Czarne Adidosy", image: shoes2, price: "250zł"},
-    {name: "Białe Pumy", image: shoes, price: "99zł"},
-    {name: "Czarne Konfersy", image: shoes2, price: "333zł"},
-    {name: "Czarne Konfersy", image: shoes2, price: "333zł"},
-    {name: "Białe Najkacze", image: shoes, price: "120zł"},
+    {id: 1, name: "Białe Najkacze", image: shoes, price: "120zł"},
+    {id: 2, name: "Czarne Adidosy", image: shoes2, price: "250zł"},
+    {id: 3, name: "Białe Pumy", image: shoes, price: "99zł"},
+    {id: 4, name: "Czarne Konfersy", image: shoes2, price: "333zł"},
+    {id: 5, name: "Czarne Konfersy", image: shoes2, price: "333zł"},
+    {id: 6, name: "Białe Najkacze", image: shoes, price: "120zł"},
 ]
 
 const SwiperProdcuts = () => {
@@ -25,7 +25,7 @@ const SwiperProdcuts = () => {
         >
             {products.map(item => {
                 return (
-                    <SwiperSlide className="product">
+                    <SwiperSlide className="product" key={item.id}>
                         <a href="/">
                             <img src={item.image} alt="shoes" />
                             <div className="description">

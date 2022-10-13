@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import Categories from './Categories';
+import Categories from "./Categories";
+import ReplaceValueOfObject from "../../helpers/ReplaceValueOfObject";
 
 import productsData from './productsData.json';
 import categoriesData from './categoriesData.json';
-
 
 const NewAndFeatured = () => {
     const [sortedProducts, setSortedProducts] = useState(productsData);
@@ -22,20 +22,11 @@ const NewAndFeatured = () => {
             }
         })
 
-        // const newCategories = categories.forEach(item => {
-        //     if(item.id === id) {
-        //         item.active = true       
-        //     } else item.active = false;
-        // })
-
-        const newCategories = categories; 
-
-        console.log(newCategories);
-        // setCategories(newCategories);
+        setCategories(ReplaceValueOfObject(categoriesData, id, 'active', true));
 
         setSortedProducts([
             ...newArray,
-        ]);      
+        ]);   
     }
     
     return (
