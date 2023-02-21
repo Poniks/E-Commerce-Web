@@ -14,11 +14,15 @@
                 flex-basis: 25%;
 
                 ul {
-
                     li {
                         margin: 10px 0;
-                        cursor: pointer;
-                        width: 100px;
+                        line-height: 27px;
+                        display: flex;
+
+                        div {
+                            cursor: pointer;
+                            padding-right: 10px;
+                        }
 
                         &.active {
                             font-size: 20px;

@@ -11,19 +11,27 @@ const NewAndFeatured = () => {
     const [sortedProducts, setSortedProducts] = useState(productsData);
     const [categories, setCategories] = useState(categoriesData);
 
-    const filterHandler = (e, id) => {
-        const newArray = productsData.filter(item => {
-            if(item.type === e) {
-                return (
-                    item
-                )
-            } else {
-                return  '';
-            }
-        })
+    const filterHandler = (e, id, type) => {
+        let newArray;
 
-        setCategories(ReplaceValueOfObject(categoriesData, id, 'active', true));
+        if(type === "filter"){
+            newArray = productsData.filter(item => {
+                if(item.type === e) {
+                    return (
+                        item
+                    )
+                } else {
+                    return  '';
+                }
+            })
+            
+            setCategories(ReplaceValueOfObject(categoriesData, id, 'active', true));
+        } else if (type === "delete") {
+            newArray = productsData;
 
+            setCategories(ReplaceValueOfObject(categoriesData, id, 'active', false));
+        }
+        
         setSortedProducts([
             ...newArray,
         ]);   
