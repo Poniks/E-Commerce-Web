@@ -1,5 +1,5 @@
 import React from 'react';
-import CancelIcon from '@material-ui/icons/DeleteForever';
+import ClearIcon from '@material-ui/icons/Clear';
 
 
 const Categories = ({item, filterHandler, id, active}) => {
@@ -11,7 +11,7 @@ const Categories = ({item, filterHandler, id, active}) => {
                     <div onClick={() => {filterHandler(item, id)}}>
                         {item} 
                     </div>
-                    <CancelIcon onClick={() => {filterHandler(item, id, "delete")}} />
+                    <ClearIcon onClick={() => {filterHandler(item, id, "delete")}} />
                 </li> 
                 ) : (
                 <li value={item} className={active ? "active" : ""}> 

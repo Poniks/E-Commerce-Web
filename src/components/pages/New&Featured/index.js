@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import Categories from "./Categories";
@@ -11,10 +11,17 @@ const NewAndFeatured = () => {
     const [sortedProducts, setSortedProducts] = useState(productsData);
     const [categories, setCategories] = useState(categoriesData);
 
-    const filterHandler = (e, id, type) => {
-        let newArray;
+    useEffect(() => {
+        const filterStorage = JSON.parse(localStorage.getItem('filterArray'));
 
-        if(type === "filter"){
+        if(filterStorage !== null){
+            filterHandler(filterStorage[0], filterStorage[1], "filter");
+        }
+    }, [])
+
+    const filterHandler = (e, id, action) => {
+        let newArray;
+        if(action === "filter"){
             newArray = productsData.filter(item => {
                 if(item.type === e) {
                     return (
@@ -24,10 +31,14 @@ const NewAndFeatured = () => {
                     return  '';
                 }
             })
-            
+
+            localStorage.setItem('filterArray', JSON.stringify([e, id, newArray]));
+
             setCategories(ReplaceValueOfObject(categoriesData, id, 'active', true));
-        } else if (type === "delete") {
+        } else if (action === "delete") {
             newArray = productsData;
+
+            localStorage.removeItem('filterArray', JSON.stringify([e, id, newArray]));
 
             setCategories(ReplaceValueOfObject(categoriesData, id, 'active', false));
         }

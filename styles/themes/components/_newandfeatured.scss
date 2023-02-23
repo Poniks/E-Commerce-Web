@@ -18,10 +18,15 @@
                         margin: 10px 0;
                         line-height: 27px;
                         display: flex;
+                        align-items: center;
 
                         div {
                             cursor: pointer;
-                            padding-right: 10px;
+                            padding-right: 5px;
+                        }
+
+                        svg {
+                            cursor: pointer;
                         }
 
                         &.active {
