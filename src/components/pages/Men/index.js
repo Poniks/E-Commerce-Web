@@ -7,7 +7,7 @@ import ReplaceValueOfObject from "../../helpers/ReplaceValueOfObject";
 import productsData from '../productsData.json';
 import categoriesData from '../categoriesData.json';
 
-const NewAndFeatured = () => {
+const Men = () => {
     const [sortedProducts, setSortedProducts] = useState(productsData);
     const [categories, setCategories] = useState(categoriesData);
 
@@ -52,7 +52,7 @@ const NewAndFeatured = () => {
         <div>
             <Header />
             <div className='dashboard'>
-                <h2>New & Featured</h2>
+                <h2>Men</h2>
                 <div className='box'>
                     <div className='box__item'>
                         <ul>
@@ -86,4 +86,4 @@ const NewAndFeatured = () => {
     );
 }
 
-export default NewAndFeatured;
+export default Men;
