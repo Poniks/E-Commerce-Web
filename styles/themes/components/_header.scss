@@ -12,10 +12,24 @@
         }
 
         .actions {
+            position: relative;
             .MuiSvgIcon-root {
                 font-size: 3rem;
                 margin: 0 10px;
                 cursor: pointer;
+            }
+
+            .test {
+                z-index: 10;
+                width: 200px;
+                height: 200px;
+                left: -50%;
+                top: 130%;
+                position: absolute;
+                background-color: #f9f9f9;
+                border: 1px solid black;
+                border-radius: 30px;
+                text-align: center;
             }
         }
     }
